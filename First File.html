@@ -16,7 +16,7 @@
     <th><p style="text-align:right;font-size:2cm">Oskar Skonieczny</p></th>
 </tr>
 <button type="button" onclick="myFunction1()">Klik</button>
-<button type="button" onclick="myFunction2()">Klik</button>
+<button type="button" onclick="alert(myFunction2(5))">Klik</button>
 <button type="button" onclick="myFunction3()">Klik</button>
 
 <script>
@@ -27,16 +27,18 @@
 </script>
 
 <script>
-    function myFunction2()
+    function myFunction2(n)
     {
-        alert(Math.random() * 100);
+        if(n==0) {return 0;}
+        else if (n==1) {return 1;}
+        else {return myFunction2(n-1)+myFunction2(n-2);}
     }
 </script>
 
 <script>
-    function myFunction1()
+    function myFunction3()
     {
-        alert(Math.random() * 100);
+    
     }
 </script>
 
